@@ -9,3 +9,17 @@ script = ExtResource( 1 )
 margin_right = 4340.0
 margin_bottom = 2919.0
 color = Color( 1, 1, 1, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+
+[node name="Label" type="Label" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 14.0
+text = "55"
