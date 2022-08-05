@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 position = Vector2( -38, -29 )
 frames = ExtResource( 2 )
 animation = "idle"
+frame = 1
 playing = true
 centered = false
 

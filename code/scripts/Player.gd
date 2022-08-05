@@ -8,6 +8,9 @@ onready var gameobject = get_node("/root/Gameobject")
 var velocity = Vector2.ZERO
 var execute_this_code: bool = true
 
+
+	
+	
 func get_input():
 	velocity.x = 0
 	if Input.is_action_pressed("move_right"):
