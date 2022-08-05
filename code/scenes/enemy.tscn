@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/placeholder-5.png" type="Texture" id=1]
+[ext_resource path="res://sprites/auto.png" type="Texture" id=2]
+[ext_resource path="res://scripts/enemy.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "squish",
+"speed": 19.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17.5, 30 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 17.5, 6.125 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 24.5, 29 )
+
+[node name="enemy" type="KinematicBody2D"]
+position = Vector2( 496, 400 )
+collision_layer = 8
+collision_mask = 19
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, -2 )
+shape = SubResource( 2 )
+
+[node name="floorchecker" type="RayCast2D" parent="."]
+position = Vector2( 0, -83.135 )
+enabled = true
+cast_to = Vector2( 0, 118.175 )
+collision_mask = 16
+
+[node name="topchecker" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topchecker"]
+position = Vector2( 0, -40 )
+shape = SubResource( 3 )
+
+[node name="sidechecker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sidechecker"]
+position = Vector2( 0.5, 1 )
+shape = SubResource( 4 )
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.128
+one_shot = true
+
+[node name="soundhurt" type="AudioStreamPlayer" parent="."]
+
+[node name="soundstomp" type="AudioStreamPlayer" parent="."]
+volume_db = -7.091
+
+[connection signal="body_entered" from="topchecker" to="." method="_on_topchecker_body_entered"]
+[connection signal="body_entered" from="sidechecker" to="." method="_on_sidechecker_body_entered"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
