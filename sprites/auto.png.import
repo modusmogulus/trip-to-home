@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/auto.png-dbc5f17c8fd02d009cb66a6039bff506.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://doc/brainstorming/ideas-questions-etc-3.jpg"
+source_file="res://sprites/auto.png"
+dest_files=[ "res://.import/auto.png-dbc5f17c8fd02d009cb66a6039bff506.stex" ]
+
 [params]
 
 compress/mode=0
