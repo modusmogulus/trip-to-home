@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buy_it.png-7b4ac044330eda551a2f90408e216134.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://brainstorming/buy_it.png"
-dest_files=[ "res://.import/buy_it.png-7b4ac044330eda551a2f90408e216134.stex" ]
-
+source_file="res://doc/brainstorming/ideas-questions-etc-1.jpg"
 [params]
 
 compress/mode=0
