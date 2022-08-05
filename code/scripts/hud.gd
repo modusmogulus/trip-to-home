@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-export var bankaccount = 1.5
+export var bankaccount = 1
 var coins = 0
 
 func _ready():

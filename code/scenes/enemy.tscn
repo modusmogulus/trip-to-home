@@ -28,8 +28,8 @@ extents = Vector2( 24.5, 29 )
 
 [node name="enemy" type="KinematicBody2D"]
 position = Vector2( 496, 400 )
-collision_layer = 8
-collision_mask = 19
+collision_layer = 16
+collision_mask = 11
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -45,11 +45,11 @@ shape = SubResource( 2 )
 position = Vector2( 0, -83.135 )
 enabled = true
 cast_to = Vector2( 0, 118.175 )
-collision_mask = 16
+collision_mask = 8
 
 [node name="topchecker" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 3
+collision_layer = 16
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="topchecker"]
 position = Vector2( 0, -40 )
