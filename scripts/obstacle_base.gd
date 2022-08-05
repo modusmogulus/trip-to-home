@@ -3,6 +3,10 @@ extends KinematicBody2D
 export var speed_y = -2
 export var speed_x = 0
 export var x_limited = false
+onready var global = get_node("/root/Gameobject")
+
+export(int, "default", "crayon", "icecream") var character_class
+
 var screen_size
 
 # Constant variables for state enum
