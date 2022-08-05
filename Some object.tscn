@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Some object" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
