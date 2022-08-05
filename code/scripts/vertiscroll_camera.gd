@@ -4,7 +4,7 @@ extends Camera2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var sprite = $AnimatedSprite
+#onready var sprite = $AnimatedSprite
 onready var gameobject = get_node("/root/Gameobject")
 onready var time_left = gameobject.time_left
 onready var label = $Control/Label

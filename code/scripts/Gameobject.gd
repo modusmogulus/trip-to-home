@@ -7,7 +7,7 @@ var ice_creams_left = 0
 
 onready var timer = $Timer
 var time_left = 60
-onready var label = $Control/Label
+#onready var label = $Control/Label
 
 func _ready():
 	timer.wait_time = time_left
