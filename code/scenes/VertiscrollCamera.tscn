@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/vertiscroll_camera.gd" type="Script" id=1]
+
+[node name="VertiscrollCamera" type="Camera2D"]
+current = true
+limit_left = -515
+limit_right = 514
+smoothing_enabled = true
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = -4.0
+margin_top = -381.0
+margin_right = 1009.0
+margin_bottom = 385.0
+text = "ABCDEFG"
