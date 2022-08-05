@@ -189,5 +189,13 @@ format = 1
 tile_data = PoolIntArray( 262136, 5, 0, 262137, 5, 0, 262138, 5, 0, 262139, 5, 0, 262140, 6, 0, 327672, 7, 0, 327673, 7, 0, 327674, 7, 0, 327675, 7, 0, 327676, 4, 0, 327677, 6, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 393208, 7, 0, 393209, 7, 0, 393210, 7, 0, 393211, 7, 0, 393212, 7, 0, 393213, 4, 0, 393214, 5, 0, 393215, 6, 0, 393217, 536870914, 0, 393218, 536870912, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 0, 0, 393225, 2, 0 )
 
 [node name="icecream" parent="." instance=ExtResource( 4 )]
-position = Vector2( -223.51, -94.3251 )
+position = Vector2( -270.237, 63.9456 )
+time_left = 34
+
+[node name="icecream2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -181.304, 137.805 )
+time_left = 34
+
+[node name="icecream3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -50.1655, 201.114 )
 time_left = 34
