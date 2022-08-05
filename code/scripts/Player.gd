@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export (int) var speed = 300
-export (int) var jump_speed = -700
+export (int) var jump_speed = -900
 export (int) var gravity = 2000
 onready var sprite = $AnimatedSprite
 onready var gameobject = get_node("/root/Gameobject")
