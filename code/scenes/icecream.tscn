@@ -29,10 +29,10 @@ autostart = true
 [node name="Label" type="Label" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 79.0
-margin_bottom = 51.0
-custom_colors/font_color = Color( 0.0470588, 0.956863, 0.0392157, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+margin_left = -28.0295
+margin_top = 5.24616
+margin_right = 50.9705
+margin_bottom = 56.2462
 text = "23"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
