@@ -1,38 +1,22 @@
-extends Area2D
+extends KinematicBody2D
 
-export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
+export (int) var speed = 300
+export (int) var jump_speed = -700
+export (int) var gravity = 2000
 
-onready var global = get_node("/root/Gameobject")
+var velocity = Vector2.ZERO
 
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	screen_size = get_viewport_rect().size
-
-
-func _process(delta):
-
-	var velocity = Vector2.ZERO # The player's movement vector.
+func get_input():
+	velocity.x = 0
 	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
+		velocity.x += speed
 	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_back"):
-		velocity.y += 1
-	if Input.is_action_pressed("move_forward"):
-		velocity.y -= 1
+		velocity.x -= speed
 
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		$AnimatedSprite.play()
-	else:
-		$AnimatedSprite.stop()
-		
-	
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
-
-
+func _physics_process(delta):
+	get_input()
+	velocity.y += gravity * delta
+	velocity = move_and_slide(velocity, Vector2.UP)
+	if Input.is_action_just_pressed("move_jump"):
+		if is_on_floor():
+			velocity.y = jump_speed
