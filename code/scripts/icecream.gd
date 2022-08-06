@@ -26,6 +26,7 @@ func _on_Area2D_body_entered(body):
 		gameobject.ice_creams_eaten += 1
 		sprite.visible = false
 		collider.disabled = true
+		label.visible=false
 		sfx.play()
 		emit_signal("coin_collected")
 
