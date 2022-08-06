@@ -16,18 +16,22 @@ func get_input():
 	velocity.x = 0
 	if Input.is_action_pressed("move_right"):
 		velocity.x += speed
+		#$AnimatedSprite.play("Idle")
 		sprite.flip_h = false
 	if Input.is_action_pressed("move_left"):
+		#$AnimatedSprite.play("Idle")
 		velocity.x -= speed
 		sprite.flip_h = true
 
 func _physics_process(delta):
 	print(str($jumptimer.wait_time) + str(onground) + str(is_on_floor()))
 	if is_on_floor() == true:
+		$AnimatedSprite.play("Idle")
 		$jumptimer.wait_time = 0.1
 		onground = true
 	if is_on_floor() == false && onground == true:
 		onground = false
+		$AnimatedSprite.play("Idle")
 		$jumptimer.start()
 		
 		
@@ -38,6 +42,7 @@ func _physics_process(delta):
 		if onground:
 			velocity.y = jump_speed + (position.y / 4)
 			jumpsfx.play()
+			#$AnimatedSprite.play("Jump")
 #enemy, hp etc
 func bounce():
 	velocity.y = jump_speed * 1
