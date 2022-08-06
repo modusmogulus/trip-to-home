@@ -20,8 +20,9 @@ func _physics_process(delta):
 		
 
 func _on_coin_collected():
+	coins = coins + bankaccount
 	print("jdjddsdfddsfffdsdfdfdsddfdsfsdf")
-	coins = 238
+	#coins = 238
 	_ready()
 
 	
