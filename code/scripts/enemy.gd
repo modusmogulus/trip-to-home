@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var gameobject = get_node("/root/Gameobject")
 var speed = 50
 var velocity = Vector2()
 export var direction = -1
@@ -28,6 +29,8 @@ func _physics_process(delta):
 
 func _on_topchecker_body_entered(body):
 		if body.collision_layer == 1:
+			gameobject.camera.camerashake = 0.5
+			gameobject.camera.shake()
 			speed = 0
 			#$soundstomp.play()
 			set_collision_layer_bit(4, false)
