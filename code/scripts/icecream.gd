@@ -23,6 +23,7 @@ func _process(delta):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		gameobject.ice_creams_left -= 1
+		gameobject.ice_creams_eaten += 1
 		sprite.visible = false
 		collider.disabled = true
 		sfx.play()
@@ -32,6 +33,7 @@ func _on_sfx_finished():
 
 
 func _on_Timer_timeout():
+	gameobject.ice_creams_melted += 1
 	queue_free()
 
 
