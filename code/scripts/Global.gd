@@ -12,8 +12,9 @@ func lose_life():
 	hud.load_hearts()
 	if lives <= 0:
 		#get_tree().change_scene("res://die.tscn")
-		get_tree().reload_current_scene()		
+		#get_tree().change_scene("res://scenes/gameover.tscn")		
 		yield(get_tree().create_timer(0.01),"timeout")
+		get_tree().change_scene("res://scenes/gameover.tscn")	
 		lives = max_lives
 		hud.load_hearts()
 		print("wowowo")

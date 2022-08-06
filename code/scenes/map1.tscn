@@ -54,15 +54,16 @@ tile_data = PoolIntArray( -6750215, 43, 0, -6750214, 38, 0, -6750213, 38, 0, -67
 
 [node name="icecream" parent="." instance=ExtResource( 4 )]
 position = Vector2( -273, 164 )
-time_left = 10
+rotation = 0.0318267
+time_left = 2
 
 [node name="icecream2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 314, 20 )
-time_left = 10
+time_left = 1
 
 [node name="icecream3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 267, -692 )
-time_left = 10
+time_left = 1
 
 [node name="icecream4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -190, -1396 )
@@ -74,7 +75,11 @@ time_left = 10
 
 [node name="icecream6" parent="." instance=ExtResource( 4 )]
 position = Vector2( -354, -2926 )
-time_left = 10
+time_left = 4
+
+[node name="icecream8" parent="." instance=ExtResource( 4 )]
+position = Vector2( -141, -4783 )
+time_left = 7
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
