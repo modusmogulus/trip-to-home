@@ -1,3 +1,101 @@
-[gd_scene format=2]
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://sprites/game over.webm" type="VideoStream" id=1]
+[ext_resource path="res://sprites/menubutton.png" type="Texture" id=2]
+[ext_resource path="res://sprites/menubuttonhvoer.png" type="Texture" id=3]
+[ext_resource path="res://scenes/gameover.gd" type="Script" id=4]
+[ext_resource path="res://sprites/menuffffbutton.png" type="Texture" id=5]
+[ext_resource path="res://sprites/menuffffbuttonhvoer.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "buttons"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3.2, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="gameover" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = -100.0
+margin_right = 1138.0
+margin_bottom = 766.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Button" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 579.0
+margin_top = 458.0
+margin_right = 1128.0
+margin_bottom = 614.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Button2" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 229.0
+margin_top = 459.0
+margin_right = 778.0
+margin_bottom = 615.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "buttons"
+anims/RESET = SubResource( 2 )
+anims/buttons = SubResource( 1 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
