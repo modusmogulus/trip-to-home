@@ -24,7 +24,11 @@ position = Vector2( -380, 101 )
 [node name="VertiscrollCamera" parent="Player" instance=ExtResource( 2 )]
 
 [node name="Node2D" parent="Player/VertiscrollCamera" instance=ExtResource( 9 )]
-position = Vector2( 234.276, -21.0326 )
+position = Vector2( 137, -608 )
+
+[node name="icecream7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 189, -3950 )
+time_left = 3
 
 [node name="one way collision" type="TileMap" parent="."]
 tile_set = ExtResource( 7 )
@@ -94,6 +98,22 @@ detects_cliffs = false
 position = Vector2( -309, -213 )
 direction = 1
 
+[node name="rat4" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -97, -3947 )
+direction = 3
+
+[node name="rat5" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -197, -4820 )
+direction = 1
+
+[node name="rat6" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( 178, -5485 )
+direction = 1
+
+[node name="rat7" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -138, -6066 )
+direction = 2
+
 [node name="worm" parent="enemies" instance=ExtResource( 6 )]
 position = Vector2( 157.171, -457.425 )
 direction = 1
@@ -109,6 +129,18 @@ direction = 1
 [node name="worm4" parent="enemies" instance=ExtResource( 6 )]
 position = Vector2( -184.809, -2016.45 )
 direction = 1
+
+[node name="worm5" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -253, -4281 )
+direction = 1
+
+[node name="worm6" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -92, -4802 )
+direction = -2
+
+[node name="worm7" parent="enemies" instance=ExtResource( 6 )]
+position = Vector2( -151, -5683 )
+direction = 2
 
 [node name="Icecream" parent="." instance=ExtResource( 10 )]
 position = Vector2( 203.664, -6672.2 )
