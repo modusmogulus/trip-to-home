@@ -20,4 +20,5 @@ func _process(delta):
 
 	if ice_creams_melted >= 1:
 		ice_creams_melted = 0
-		get_tree().change_scene("res://scenes/map1.tscn")
+		#get_tree().change_scene("res://scenes/map1.tscn")
+		Global.lose_life()
