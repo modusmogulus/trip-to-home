@@ -25,7 +25,9 @@ Credits
 -------
 Silver​ Graphics, code
 
-Modusmogulus Music, code, effects
+Modusmogulus Code, effects
+
+Alios Music
 
 Zoppa Graphics, code
 
