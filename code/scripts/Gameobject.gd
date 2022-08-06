@@ -5,7 +5,7 @@ extends Node2D
 var modifier_state = 0
 var ice_creams_left = 0
 var ice_creams_eaten = 0
-var ice_creams_meted = 0
+var ice_creams_melted = 0
 var player_height = 0
 var camera = null
 
@@ -18,5 +18,6 @@ func _ready():
 	
 func _process(delta):
 
-	if ice_creams_meted >= 5:
+	if ice_creams_melted >= 1:
+		ice_creams_melted = 0
 		get_tree().change_scene("res://scenes/map1.tscn")

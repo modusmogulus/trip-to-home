@@ -35,7 +35,7 @@ func _on_sfx_finished():
 
 
 func _on_Timer_timeout():
-	#gameobject.ice_creams_melted += 1
+	gameobject.ice_creams_melted += 1
 	queue_free()
 
 
