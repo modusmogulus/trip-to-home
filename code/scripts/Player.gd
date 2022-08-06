@@ -16,10 +16,8 @@ func get_input():
 	velocity.x = 0
 	if Input.is_action_pressed("move_right"):
 		velocity.x += speed
-		#$AnimatedSprite.play("Idle")
 		sprite.flip_h = false
 	if Input.is_action_pressed("move_left"):
-		#$AnimatedSprite.play("Idle")
 		velocity.x -= speed
 		sprite.flip_h = true
 
