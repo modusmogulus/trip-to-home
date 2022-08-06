@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/icecream.gd" type="Script" id=1]
 [ext_resource path="res://sprites/jaatelo.png" type="Texture" id=2]
-[ext_resource path="res://audio/sfx/Randomize15.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/sfx/Randomize28.wav" type="AudioStream" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -51,7 +51,7 @@ shape = SubResource( 2 )
 [node name="sfx" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -5.5, 16 )
 stream = ExtResource( 3 )
-volume_db = 3.0
+volume_db = -30.0
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
