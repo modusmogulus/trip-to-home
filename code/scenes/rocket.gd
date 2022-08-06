@@ -16,4 +16,5 @@ func _on_Area2D_body_entered(body):
 		sprite.visible = false
 		collider.disabled = true
 		sfx.play()
+		get_tree().change_scene("res://Menu/YouWon.tscn")
 		#TODO CHANGE TO YOU WIN SCENE!
