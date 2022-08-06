@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/magnet/magnet_frames.tres" type="SpriteFrames" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 306.5, 289 )
+
+[node name="Magnet" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+frame = 2
+playing = true
+
+[node name="Magnet" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+position = Vector2( 3, -2 )
+shape = SubResource( 1 )

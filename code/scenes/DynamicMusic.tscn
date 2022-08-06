@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://audio/squirell song top.wav" type="AudioStream" id=1]
+[ext_resource path="res://audio/squirrel song base.wav" type="AudioStream" id=2]
+[ext_resource path="res://scripts/dynamic_music.gd" type="Script" id=3]
+
+[node name="DynamicMusic" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="base" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="top" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
