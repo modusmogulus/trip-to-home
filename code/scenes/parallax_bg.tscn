@@ -7,6 +7,7 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.4 )
 motion_scale = Vector2( 0.8, 0.8 )
 
 [node name="ToditherSeamless" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]

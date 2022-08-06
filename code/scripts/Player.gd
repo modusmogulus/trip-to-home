@@ -8,7 +8,7 @@ onready var jumpsfx = $jumpsfx
 onready var gameobject = get_node("/root/Gameobject")
 var velocity = Vector2.ZERO
 var execute_this_code: bool = true
-
+var onground = false
 
 	
 	
@@ -22,11 +22,20 @@ func get_input():
 		sprite.flip_h = true
 
 func _physics_process(delta):
+	print(str($jumptimer.wait_time) + str(onground) + str(is_on_floor()))
+	if is_on_floor() == true:
+		$jumptimer.wait_time = 0.1
+		onground = true
+	if is_on_floor() == false && onground == true:
+		onground = false
+		$jumptimer.start()
+		
+		
 	get_input()
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("move_jump"):
-		if is_on_floor():
+		if onground:
 			velocity.y = jump_speed + (position.y / 4)
 			jumpsfx.play()
 #enemy, hp etc
@@ -51,3 +60,5 @@ func ouch(var enemyposx):
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
 	execute_this_code = true
+
+

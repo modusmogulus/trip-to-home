@@ -8,9 +8,11 @@ export var detects_cliffs = true
 
 func _ready():
 	if direction == 1:
-		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.flip_h = false
 	$floorchecker.position.x = $CollisionShape2D.shape.get_extents().x * direction
 	$floorchecker.enabled = detects_cliffs
+	if direction == 0:
+		$AnimatedSprite.flip_h = true
 func _physics_process(delta):
 	
 	if is_on_wall() or not $floorchecker.is_colliding() and detects_cliffs and is_on_floor():
@@ -29,8 +31,7 @@ func _physics_process(delta):
 
 func _on_topchecker_body_entered(body):
 		if body.collision_layer == 1:
-			gameobject.camera.camerashake = 0.5
-			gameobject.camera.shake()
+			gameobject.camera.shake(0.3, 3.0)
 			speed = 0
 			#$soundstomp.play()
 			set_collision_layer_bit(4, false)

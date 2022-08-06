@@ -23,8 +23,8 @@ func _ready():
 	if time_left != null:
 		label.text = str(ceil(gameobject.time_left))
 
-func shake():
-	var amount = pow(camerashake, camerashake_power)
+func shake(pwr, amnt):
+	var amount = pow(pwr, amnt)
 	rotation = max_roll * amount * rand_range(-1, 1)
 	offset.x = max_offset.x * amount * rand_range(-1, 1)
 	offset.y = max_offset.y * amount * rand_range(-1, 1)
@@ -34,4 +34,4 @@ func _process(delta):
 		global_position = get_node(target).global_position
 	if camerashake:
 		camerashake = max(camerashake - decay * delta, 0)
-		shake()
+		shake(0.1, 2.0)
