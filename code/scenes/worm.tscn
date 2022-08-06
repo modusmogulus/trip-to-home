@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/auto.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.0
+
+[node name="rat" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 19
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.484375, 0.453125 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

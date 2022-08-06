@@ -7,12 +7,21 @@ export var direction = -1
 export var detects_cliffs = true
 
 func _ready():
+	# for example "rat:[KinematicBody2D:1548]"
+
+	var name = str(get_node_and_resource(".")[0])
+	if "worm" in name:
+		$AnimatedSprite.play("worm-walk")
+	else:
+		$AnimatedSprite.play("walk")
+			
 	if direction == 1:
 		$AnimatedSprite.flip_h = false
 	$floorchecker.position.x = $CollisionShape2D.shape.get_extents().x * direction
 	$floorchecker.enabled = detects_cliffs
 	if direction == 0:
 		$AnimatedSprite.flip_h = true
+		
 func _physics_process(delta):
 	
 	if is_on_wall() or not $floorchecker.is_colliding() and detects_cliffs and is_on_floor():
