@@ -29,8 +29,7 @@ func _physics_process(delta):
 
 func _on_topchecker_body_entered(body):
 		if body.collision_layer == 1:
-			gameobject.camera.camerashake = 0.5
-			gameobject.camera.shake()
+			gameobject.camera.shake(0.3, 3.0)
 			speed = 0
 			#$soundstomp.play()
 			set_collision_layer_bit(4, false)
