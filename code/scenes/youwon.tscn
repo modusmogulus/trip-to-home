@@ -99,7 +99,8 @@ anims/RESET = SubResource( 2 )
 anims/buttons = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 506.381, 373.039 )
+position = Vector2( 538.129, 122.23 )
+scale = Vector2( 0.945433, 0.44441 )
 texture = ExtResource( 7 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
