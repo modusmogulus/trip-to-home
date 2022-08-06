@@ -21,13 +21,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Trip to home"
-run/main_scene="res://scenes/map1.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Gameobject="*res://scenes/Gameobject.tscn"
 Global="*res://scripts/Global.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GameStates="*res://scripts/game_states.gd"
 
 [display]
 
@@ -37,7 +39,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
 
 [global]
 
