@@ -4,6 +4,7 @@ export (int) var speed = 300
 export (int) var jump_speed = -900
 export (int) var gravity = 2000
 onready var sprite = $AnimatedSprite
+onready var jumpsfx = $jumpsfx
 onready var gameobject = get_node("/root/Gameobject")
 var velocity = Vector2.ZERO
 var execute_this_code: bool = true
@@ -26,7 +27,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("move_jump"):
 		if is_on_floor():
-			velocity.y = jump_speed + position.y 
+			velocity.y = jump_speed + (position.y / 4)
+			jumpsfx.play()
 #enemy, hp etc
 func bounce():
 	velocity.y = jump_speed * 1
