@@ -59,11 +59,11 @@ time_left = 2
 
 [node name="icecream2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 314, 20 )
-time_left = 1
+time_left = 5
 
 [node name="icecream3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 267, -692 )
-time_left = 1
+time_left = 5
 
 [node name="icecream4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -190, -1396 )
