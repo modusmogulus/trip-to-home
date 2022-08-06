@@ -23,8 +23,6 @@ margin_top = 19.0
 margin_right = 1020.0
 margin_bottom = 707.0
 theme = SubResource( 2 )
-visible_characters = 1729
-percent_visible = 4.63539
 text = "The space squirrel has been'
 
 
