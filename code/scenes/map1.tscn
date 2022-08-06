@@ -110,5 +110,5 @@ direction = 1
 position = Vector2( -184.809, -2016.45 )
 direction = 1
 
-[node name="Icecream" parent="." instance=ExtResource( 10 )]
+[node name="Rocket" parent="." instance=ExtResource( 10 )]
 position = Vector2( 203.664, -6672.2 )
