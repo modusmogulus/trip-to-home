@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/orava.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://audio/sfx/Randomize14.wav" type="AudioStream" id=3]
+[ext_resource path="res://sprites/spot.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.5, 29.5 )
@@ -14,7 +15,7 @@ script = ExtResource( 1 )
 position = Vector2( -38, -29 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 2
+frame = 1
 playing = true
 centered = false
 
@@ -28,5 +29,13 @@ one_shot = true
 [node name="jumpsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = -5.0
+
+[node name="Light2D" type="Light2D" parent="."]
+light_mask = 1023
+texture = ExtResource( 4 )
+texture_scale = 12.11
+shadow_enabled = true
+shadow_color = Color( 0.431373, 0.701961, 0.721569, 0 )
+shadow_gradient_length = 58.8
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
