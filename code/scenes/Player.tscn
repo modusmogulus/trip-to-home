@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 position = Vector2( -38, -29 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 2
+frame = 1
 playing = true
 centered = false
 
@@ -34,8 +34,9 @@ volume_db = -20.0
 light_mask = 1023
 texture = ExtResource( 4 )
 texture_scale = 12.11
+energy = 0.85
 shadow_enabled = true
-shadow_color = Color( 0.760784, 0.831373, 0.909804, 0 )
+shadow_color = Color( 0.658824, 0.478431, 0.2, 0 )
 shadow_gradient_length = 58.8
 __meta__ = {
 "_edit_lock_": true
