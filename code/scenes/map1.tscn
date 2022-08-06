@@ -74,7 +74,7 @@ position = Vector2( -190, -1396 )
 time_left = 10
 
 [node name="icecream5" parent="." instance=ExtResource( 4 )]
-position = Vector2( -192, -2436 )
+position = Vector2( 34, -2911 )
 time_left = 10
 
 [node name="icecream6" parent="." instance=ExtResource( 4 )]

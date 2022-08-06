@@ -2,7 +2,7 @@ extends Node2D
 
 
 
-
+signal coin_collected
 onready var timer = $Timer
 export var time_left = 60
 onready var label = $Control/Label
@@ -34,7 +34,7 @@ func _on_sfx_finished():
 
 
 func _on_Timer_timeout():
-	gameobject.ice_creams_melted += 1
+	#gameobject.ice_creams_melted += 1
 	queue_free()
 
 

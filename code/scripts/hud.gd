@@ -8,16 +8,21 @@ func _ready():
 	load_hearts()
 	Global.hud = self
 	
+	
 func _physics_process(delta):
 	if Global.lives <= 0:
 		print("last life")
 		$AnimationPlayer.play("retry")
 		$RandomAudioStreamPlayer.play()	
+	if coins == 1:
+		coins = 93
+		load_hearts()
 		
 
 func _on_coin_collected():
+	print("jdjddsdfddsfffdsdfdfdsddfdsfsdf")
 	coins = 238
-
+	_ready()
 
 	
 
