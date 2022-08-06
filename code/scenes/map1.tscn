@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/VertiscrollCamera.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sprites/onewaycol.tres" type="TileSet" id=7]
 [ext_resource path="res://audio/space_squirrel_song.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scenes/parallax_bg.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/rocket.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=2]
 
@@ -23,7 +24,7 @@ position = Vector2( -380, 101 )
 [node name="VertiscrollCamera" parent="Player" instance=ExtResource( 2 )]
 
 [node name="Node2D" parent="Player/VertiscrollCamera" instance=ExtResource( 9 )]
-position = Vector2( 265, 33 )
+position = Vector2( 234.276, -21.0326 )
 
 [node name="one way collision" type="TileMap" parent="."]
 tile_set = ExtResource( 7 )
@@ -108,3 +109,6 @@ direction = 1
 [node name="worm4" parent="enemies" instance=ExtResource( 6 )]
 position = Vector2( -184.809, -2016.45 )
 direction = 1
+
+[node name="Icecream" parent="." instance=ExtResource( 10 )]
+position = Vector2( 203.664, -6672.2 )
