@@ -4,8 +4,8 @@
 [ext_resource path="res://sprites/menubutton.png" type="Texture" id=2]
 [ext_resource path="res://sprites/menubuttonhvoer.png" type="Texture" id=3]
 [ext_resource path="res://scenes/gameover.gd" type="Script" id=4]
-[ext_resource path="res://sprites/menuffffbutton.png" type="Texture" id=5]
-[ext_resource path="res://sprites/menuffffbuttonhvoer.png" type="Texture" id=6]
+[ext_resource path="res://sprites/restart button.png" type="Texture" id=5]
+[ext_resource path="res://sprites/restart buttonhover.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=2]
 length = 0.001

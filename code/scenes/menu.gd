@@ -16,9 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/menu.tscn")
-
-
-func _on_Button2_pressed():
+func _on_play_pressed():
 	get_tree().change_scene("res://scenes/map1.tscn")
