@@ -1,8 +1,23 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprites/placeholder-5.png" type="Texture" id=1]
-[ext_resource path="res://sprites/auto.png" type="Texture" id=2]
+[ext_resource path="res://sprites/rottakenguru-sh.png" type="Texture" id=2]
 [ext_resource path="res://scripts/enemy.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 128, 32, 64, 32 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,20 +26,20 @@ animations = [ {
 "name": "squish",
 "speed": 19.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
 "name": "walk",
-"speed": 5.0
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.5, 30 )
+extents = Vector2( 24.5, 10.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 17.5, 6.125 )
+extents = Vector2( 25.25, 6.125 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 24.5, 29 )
+extents = Vector2( 31, 8 )
 
 [node name="enemy" type="KinematicBody2D"]
 position = Vector2( 496, 400 )
@@ -38,11 +53,11 @@ animation = "walk"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -2 )
+position = Vector2( 0.5, 4.5 )
 shape = SubResource( 2 )
 
 [node name="floorchecker" type="RayCast2D" parent="."]
-position = Vector2( 0, -83.135 )
+position = Vector2( 0, -101.344 )
 enabled = true
 cast_to = Vector2( 0, 118.175 )
 collision_mask = 8
@@ -52,7 +67,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="topchecker"]
-position = Vector2( 0, -40 )
+position = Vector2( 0.75, -14 )
 shape = SubResource( 3 )
 
 [node name="sidechecker" type="Area2D" parent="."]
@@ -60,7 +75,7 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sidechecker"]
-position = Vector2( 0.5, 1 )
+position = Vector2( 1, 4 )
 shape = SubResource( 4 )
 
 [node name="timer" type="Timer" parent="."]

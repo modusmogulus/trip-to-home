@@ -15,7 +15,6 @@ script = ExtResource( 1 )
 position = Vector2( -38, -29 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 1
 playing = true
 centered = false
 
@@ -34,8 +33,10 @@ volume_db = -5.0
 light_mask = 1023
 texture = ExtResource( 4 )
 texture_scale = 12.11
+color = Color( 0.72549, 0.254902, 0, 1 )
+energy = 0.8
 shadow_enabled = true
-shadow_color = Color( 0.431373, 0.701961, 0.721569, 0 )
-shadow_gradient_length = 58.8
+shadow_color = Color( 0.67451, 0.501961, 0.172549, 0 )
+shadow_gradient_length = 50.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
