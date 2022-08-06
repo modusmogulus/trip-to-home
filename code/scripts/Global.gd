@@ -5,6 +5,8 @@ var lives = max_lives
 var hud
 var UNIT_SIZE
 
+signal coin_collected
+
 func lose_life():
 	lives -= 1
 	hud.load_hearts()

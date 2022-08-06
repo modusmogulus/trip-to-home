@@ -26,6 +26,7 @@ func _on_Area2D_body_entered(body):
 		sprite.visible = false
 		collider.disabled = true
 		sfx.play()
+		emit_signal("coin_collected")
 
 func _on_sfx_finished():
 	queue_free() #this is because if we free the queue immdiately after playing a sound then it wont play

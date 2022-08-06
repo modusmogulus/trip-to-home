@@ -16,26 +16,7 @@ func _physics_process(delta):
 		
 
 func _on_coin_collected():
-	coins = coins + bankaccount
-	if coins == 20:
-		if Global.lives <= Global.max_lives:
-			Global.lives += 1
-			Global.hud.load_hearts()
-		elif Global.lives >= Global.max_lives or Global.lives == Global.max_lives:
-			Global.hud.load_hearts()
-	if coins == 21:
-		if Global.lives <= Global.max_lives:
-			Global.lives += 1
-			Global.hud.load_hearts()
-		elif Global.lives >= Global.max_lives:
-			Global.hud.load_hearts()	
-	if coins == 40:
-		if Global.lives <= Global.max_lives:
-			Global.lives += 1
-			Global.hud.load_hearts()
-		elif Global.lives >= Global.max_lives or Global.lives == Global.max_lives:
-			Global.hud.load_hearts()
-	_ready()
+	coins = 238
 
 
 	
